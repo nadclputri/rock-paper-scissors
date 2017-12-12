@@ -26,26 +26,44 @@
     </head>
 
     <body>
+        <heading>
+            <h1>Rock.Paper.Scissors</h1>
+            <div id="stats">
+                <div>
+                    <p>Round: </p>
+                    <p id="round">0</p>
+                </div>
+                <div>
+                    <p>Score: </p>
+                    <p id="score">0</p>
+                </div>
+            </div>
+        </heading>
         <main>
             <div class="player">
-                <h1>Player: Computer</h1>
+                <h2>[ Computer ]</h2>
+                <i class="comp-move fas fa-hand-rock"></i>
             </div>
             <div class="player">
-                <h1>Player: User</h1>
+                <h2>[ User ]</h2>
+                <i class="user-move fas fa-hand-rock"></i>
             </div>
 
-            <button id="rock">
-                <i class="fas fa-hand-rock"></i>
-                Rock
-            </button>
-            <button id="paper">
-                <i class="far fa-hand-paper"></i>
-                Paper
-            </button>
-            <button id="scissors">
-                <i class="far fa-hand-scissors"></i>
-                Scissors
-            </button>
+            <div id="moves">
+                <h2>Your Move:</h2>
+                <button id="rock">
+                    <i class="fas fa-hand-rock"></i>
+                    Rock
+                </button>
+                <button id="paper">
+                    <i class="far fa-hand-paper"></i>
+                    Paper
+                </button>
+                <button id="scissors">
+                    <i class="far fa-hand-scissors"></i>
+                    Scissors
+                </button>
+            </div>
         </main>
     </body>
 </html>
