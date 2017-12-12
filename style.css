@@ -1,13 +1,28 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Mono:300,500,700');
 
+/* General Style */
 body {
     background-color: #262422;
     font-family: 'Roboto Mono', monospace;
+
+    max-width: 960px;
+    margin: 0 auto;
 }
 
+/* Heading */
 h1 {
-    font-style: bold;
-    font-size: 64px;
+    font-weight: 700;
+    font-size: 50px;
+    text-align: center;
+    color: #F0FF96;
+}
+
+#stats {
+    display: flex;
+    justify-content: space-between;
+
+    font-weight: 300;
+    color: #F2F2F2;
 }
 
 button {
