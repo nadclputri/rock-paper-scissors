@@ -9,3 +9,8 @@ h1 {
     font-style: bold;
     font-size: 64px;
 }
+
+button {
+    background: none;
+    border: none;
+}
