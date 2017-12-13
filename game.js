@@ -7,6 +7,21 @@ function computerMove() {
     return computer;
 }
 
+function userMove() {
+    let move = "none;"
+    document.getElementById("rock").onclick = function(event) {
+        move = "rock";
+    };
+    document.getElementById("paper").onclick = function(event) {
+        move = "paper";
+    };
+    document.getElementById("scissor").onclick = function(event) {
+        move = "scissor";
+    };
+
+    return move;
+}
+
 function game() {
     let currentRound = 1;
     let score = 0;
