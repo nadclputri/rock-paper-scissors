@@ -7,7 +7,7 @@ function computerMove() {
     return computer;
 }
 
-function round(user, computer) {
+function singleRound(user, computer) {
     let winner= "none";
     
     if (user == "rock") {
@@ -66,27 +66,29 @@ function game(userMove) {
     let round = document.getElementById("round").textContent;
     round = parseInt(round);
 
-    if (round == "5") {
-        if (number(score) > 0) {
+    if (round == 5) {
+        if (score > 0) {
             alert("Winner is user!");
             score = 0;
             round = 1;
         } else {
             alert("Winner is computer!");
             score = 0;
-            round: 1;
+            round = 1;
         }
     } else {
         let computer = computerMove();
-        let winner = round(user, computer);
+        let winner = singleRound(userMove, computer);
         
         if (winner == "user") {
             score++;
         } else if (winner == "computer") {
             score--;
         }
+
+        round++;
     }
 
-    document.getElementById("round").innerHTML = "Round: " + round + " / 5";
-    document.getElementById("score").innerHTML = "Score: " + score;
+    document.getElementById("round").innerHTML = round;
+    document.getElementById("score").innerHTML = score;
 }
