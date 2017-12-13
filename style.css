@@ -12,7 +12,7 @@ body {
 /* Heading */
 h1 {
     font-weight: 700;
-    font-size: 50px;
+    font-size: 3em;
     text-align: center;
     color: #F0FF96;
 }
@@ -43,7 +43,25 @@ h1 {
     margin-bottom: 3em;
 }
 
+/*Valid Player Moves*/
+#moves {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3em;
+
+    font-weight: 300;
+    color: #F2F2F2;
+}
+
 button {
     background: none;
     border: none;
+
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 500;
+    color: #8A915C;
+}
+
+button:hover {
+    color: #F0FF96;
 }
