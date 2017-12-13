@@ -24,3 +24,7 @@ function game() {
         document.getElementById("score").innerHTML = "Score: " + score;
     }
 }
+
+window.onload = function() {
+    game();
+}
