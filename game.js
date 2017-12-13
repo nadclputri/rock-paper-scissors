@@ -7,39 +7,86 @@ function computerMove() {
     return computer;
 }
 
-function userMove() {
-    let move = "none;"
-    document.getElementById("rock").onclick = function(event) {
-        move = "rock";
-    };
-    document.getElementById("paper").onclick = function(event) {
-        move = "paper";
-    };
-    document.getElementById("scissor").onclick = function(event) {
-        move = "scissor";
-    };
-
-    return move;
+function round(user, computer) {
+    let winner= "none";
+    
+    if (user == "rock") {
+        switch (computer) {
+            case "rock":
+                alert("Draw! Both players used rock!")
+                winner = "none";
+                break;
+            case "paper": 
+                alert("You lose! Paper beats rock!")
+                winner = "computer";
+                break;
+            case "scissor":
+                alert("You win! Rock beats scissor!")
+                winner = "user";
+                break;
+        }
+    } else if (user == "paper") {
+        switch (computer) {
+            case "paper":
+                alert("Draw! Both players used paper!")
+                winner = "none";
+                break;
+            case "scissor": 
+                alert("You lose! Scissor beats paper!")
+                winner = "computer";
+                break;
+            case "rock":
+                alert("You win! Paper beats rock!")
+                winner = "user";
+                break;
+        }
+    } else if (user == "scissor") {
+        switch (computer) {
+            case "scissor":
+                alert("Draw! Both players used scissor!")
+                winner = "none";
+                break;
+            case "rock": 
+                alert("You lose! Rock beats scissor!")
+                winner = "computer";
+                break;
+            case "paper":
+                alert("You win! Scissor beats paper!")
+                winner = "user";
+                break;
+        }
+    }
+    
+    return winner;
 }
 
-function game() {
-    let currentRound = 1;
-    let score = 0;
+function game(userMove) {
+    let score = document.getElementById("score").textContent;
+    alert("Score is: " + score);
+    let round = document.getElementById("round").textContent;
+    alert("Round is: " + round);
 
-    while (currentRound < 6) {
-        document.getElementById("round").innerHTML = "Round: " + currentRound + " / 5";
-        let winner = round();
-
+    if (round == "5") {
+        if (number(score) > 0) {
+            alert("Winner is user!");
+            score = 0;
+            round = 1;
+        } else {
+            alert("Winner is computer!");
+            score = 0;
+            round: 1;
+        }
+    } else {
+        let computer = computerMove();
+        let winner = round(user, computer);
+        
         if (winner == "user") {
             score++;
         } else if (winner == "computer") {
             score--;
         }
-
-        document.getElementById("score").innerHTML = "Score: " + score;
     }
-}
 
-window.onload = function() {
-    game();
+    document.getElementById("round").innerHTML = "Round: " + round + " / 5";
+    document.getElementById("score").innerHTML = "Score: " + score;
 }

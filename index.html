@@ -31,8 +31,8 @@
         <heading>
             <h1>Rock, Paper, Scissors!</h1>
             <div id="stats">
-                    <p id="round">Round: 1 / 5</p>
-                    <p id="score">Score: 0</p>
+                    <p>Round: <span id="round">1</span> / 5</p>
+                    <p>Score: <span id="score">0</span></p>
             </div>
         </heading>
         <main>
@@ -50,15 +50,15 @@
 
             <div id="moves">
                 <p>Your Move:</p>
-                <button class="valid-move" id="rock">
+                <button class="valid-move" id="rock" onclick="game('rock')">
                     <p>Rock</p>
                     <i class="fas fa-hand-rock fa-3x"></i>
                 </button>
-                <button class="valid-move" id="paper">
+                <button class="valid-move" id="paper" onclick="game('paper')">
                     <p>Paper</p>
                     <i class="fas fa-hand-paper fa-3x"></i>
                 </button>
-                <button class="valid-move" id="scissors">
+                <button class="valid-move" id="scissors" onclick="game('scissors')">
                     <p>Scissors</p>
                     <i class="fas fa-hand-scissors fa-3x"></i>
                 </button>
