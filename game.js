@@ -62,9 +62,9 @@ function round(user, computer) {
 
 function game(userMove) {
     let score = document.getElementById("score").textContent;
-    alert("Score is: " + score);
+    score = parseInt(score);
     let round = document.getElementById("round").textContent;
-    alert("Round is: " + round);
+    round = parseInt(round);
 
     if (round == "5") {
         if (number(score) > 0) {
