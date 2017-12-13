@@ -1,3 +1,12 @@
+function computerMove() {
+    let random = Math.floor((Math.random() * 3) + 1);
+    let computer = random == 1 ? "rock" : (
+                   random == 2 ? "paper" : "scissor"
+    );
+
+    return computer;
+}
+
 function game() {
     let currentRound = 1;
     let score = 0;
