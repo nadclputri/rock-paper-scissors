@@ -100,6 +100,15 @@ function game(userMove) {
     round = parseInt(round);
 
     if (round == 5) {
+        let computer = computerMove();
+        let winner = singleRound(userMove, computer);
+        
+        if (winner == "user") {
+            score++;
+        } else if (winner == "computer") {
+            score--;
+        }
+
         if (score > 0) {
             alert("Winner is user!");
             score = 0;
